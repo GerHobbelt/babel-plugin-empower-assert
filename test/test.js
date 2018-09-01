@@ -19,8 +19,14 @@ function testTransform (fixtureName, extension) {
             ]
         });
         var actual = result.code;
-        var expected = fs.readFileSync(expectedFilepath).toString();
-        assert.equal(actual, expected);
+        if (fs.existsSync(expectedFilepath)) {
+            var expected = fs.readFileSync(expectedFilepath, 'utf8');
+            assert.equal(actual, expected);
+        } else {
+            console.warn("          Regenerating test SOLLWERT for " + fixtureName + " ...");
+            assert(true); // shut up test rig: one (fake) test done at least!
+            fs.writeFileSync(expectedFilepath, actual, 'utf8');
+        }
     });
 }
 
