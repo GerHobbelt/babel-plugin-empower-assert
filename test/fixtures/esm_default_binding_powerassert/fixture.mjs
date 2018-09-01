@@ -1,4 +1,4 @@
-import assert from 'power-assert';
+import assert from '@gerhobbelt/power-assert';
 
 function add (a, b) {
     assert(!isNaN(a));

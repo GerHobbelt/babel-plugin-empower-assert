@@ -1,4 +1,4 @@
-import { default as loose } from "power-assert";
+import { default as loose } from "@gerhobbelt/power-assert";
 const assert = loose.strict;
 
 function add(a, b) {

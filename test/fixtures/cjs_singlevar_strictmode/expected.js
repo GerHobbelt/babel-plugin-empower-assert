@@ -1,7 +1,7 @@
 'use strict';
 
 var foo = 'FOO',
-    assert = require("power-assert").strict,
+    assert = require("@gerhobbelt/power-assert").strict,
     bar = 'BAR';
 
 function add(a, b) {

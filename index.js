@@ -10,7 +10,7 @@
  */
 'use strict';
 
-var declare = require('@babel/helper-plugin-utils').declare;
+var declare = require('@gerhobbelt/babel-helper-plugin-utils').declare;
 
 module.exports = declare(function (api, options, dirname) {
     api.assertVersion(7);
@@ -49,7 +49,7 @@ module.exports = declare(function (api, options, dirname) {
                     if (!(source.equals('value', 'assert'))) {
                         return;
                     }
-                    source.set('value', 'power-assert');
+                    source.set('value', '@gerhobbelt/power-assert');
                 }
             }
         }
@@ -68,7 +68,7 @@ function replaceAssertIfMatch (node) {
     var callee = target.get('callee');
     var arg = target.get('arguments')[0];
     if (isRequireAssert(callee, arg)) {
-        arg.set('value', 'power-assert');
+        arg.set('value', '@gerhobbelt/power-assert');
     }
 }
 

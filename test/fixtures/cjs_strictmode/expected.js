@@ -1,6 +1,6 @@
 'use strict';
 
-var assert = require("power-assert").strict;
+var assert = require("@gerhobbelt/power-assert").strict;
 
 function add(a, b) {
   assert(!isNaN(a));

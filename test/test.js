@@ -5,7 +5,7 @@ var empowerAssert = require('..');
 var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
-var babel = require('@babel/core');
+var babel = require('@gerhobbelt/babel-core');
 var extend = require('xtend');
 
 function testTransform (fixtureName, extension) {
